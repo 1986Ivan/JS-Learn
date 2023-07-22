@@ -1,55 +1,51 @@
-// let num =50;
+let numbersOfFilms = +prompt('Сколько фильмов вы посмотрели?','');
+let personalMoviesDb = {
+	count: numbersOfFilms,
+	movies: {},
+	actors: {},
+	rating: [],
+	privat: false
+};
 
-// while (num<=55) {
-//     console.log(num);
-//     num++;
+// for (let i=0; i<2; i++) {
+// 	let a=prompt('Ваш последний просмотреный фильм?',''), b=prompt('Оцените последний просмотреный фильм','');
+//     personalMoviesDb.movies[a]=b;
+
+// if (a != null && b != null && a!='' && b != '' && a.length < 50 && b.length <50) {
+//     console.log('Done!');
+//     } else {
+//         console.log('Error!');
+//         i--;
+//     };
+// };
+// let x=0;
+// while (x<2) {
+// 	let a=prompt('Ваш последний просмотреный фильм?',''), 
+// 		b=prompt('Оцените последний просмотреный фильм','');
+// 	if (a != null && b != null && a!='' && b != '' && a.length < 50 && b.length <50) {
+// 		personalMoviesDb.movies[a]=b;
+// 		console.log('Done!');
+// 	} else {
+// 		console.log('Error!');
+// 		x--;
+// 	}
+// 	x++;
 // };
 
+let x=0;
+while (x<2) {
+	let a=prompt('Ваш последний просмотреный фильм?',''), 
+		b=prompt('Оцените последний просмотреный фильм','');
 
-// let num =50;
-// do {
-//     console.log(num);
-//     num++;
-// } while (num<=55);
+		(a!=null && b!=null && a!='' && b!='' && a.length<50) ? personalMoviesDb.movies[a]=b : x--, console.log('Error!');
+		x++;
+};
 
-// let num =50;
-// for (i=1; i<=8; i++) {
-//     console.log(num);
-//     num++;
-// };
 
-// for (i=1; i<10; i++) {
-//     if (i===5) {
-//         continue;
-//     }
-//     console.log(i);
-// };
 
-// for(let i=0; i<3; i++) {
-//     console.log(i);
-//     for (let j=0; j<3; j++) {
-//         console.log(j);
-//     }
-// }
+if (personalMoviesDb.count <=10) {alert('Просмотрено довольно мало фильмов');}
+else if (personalMoviesDb.count >=10 && personalMoviesDb.count <30) {alert('Вы класический зритель');}
+else if (personalMoviesDb.count > 30) {alert ('Вы киноман!');}
+else {console.log('Error!!!');}
 
-// let result ='';
-// const lenght = 10;
-// for (let i=1; i<lenght; i++){
-//     for (let j=0; j<i; j++){
-//         result += '*';
-//     }
-
-//     result += '\n';
-// }
-
-// console.log(result);
-
-for (i=0; i<3; i++) {
-    console.log(`First level ${i}`);
-    for (j=0; j<3; j++) {
-        console.log(`Second level ${j}`);
-        for (k=0; k<3; k++) {
-            console.log(`Third level ${k}`)
-        }
-    }
-}
+console.log(personalMoviesDb);
