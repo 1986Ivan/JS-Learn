@@ -1,21 +1,55 @@
-"use strict"
+// let num =50;
 
-const numberOfFilms = +prompt ('Сколько фильмов вы уже посмотрели', '');
+// while (num<=55) {
+//     console.log(num);
+//     num++;
+// };
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies:{},
-    actors: {},
-    genres: [],
-    privat: false
-};
 
-const a = prompt ('Какой последний фильм вы смотрели?', ''),
-    b = prompt ('Оцените фильм от 1 до 10 балов', ''),
-    c = prompt ('Какой последний фильм вы смотрели?', ''),
-    d = prompt ('Оцените фильм от 1 до 10 балов', ''); 
-      
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+// let num =50;
+// do {
+//     console.log(num);
+//     num++;
+// } while (num<=55);
 
-console.log (personalMovieDB);
+// let num =50;
+// for (i=1; i<=8; i++) {
+//     console.log(num);
+//     num++;
+// };
+
+// for (i=1; i<10; i++) {
+//     if (i===5) {
+//         continue;
+//     }
+//     console.log(i);
+// };
+
+// for(let i=0; i<3; i++) {
+//     console.log(i);
+//     for (let j=0; j<3; j++) {
+//         console.log(j);
+//     }
+// }
+
+// let result ='';
+// const lenght = 10;
+// for (let i=1; i<lenght; i++){
+//     for (let j=0; j<i; j++){
+//         result += '*';
+//     }
+
+//     result += '\n';
+// }
+
+// console.log(result);
+
+for (i=0; i<3; i++) {
+    console.log(`First level ${i}`);
+    for (j=0; j<3; j++) {
+        console.log(`Second level ${j}`);
+        for (k=0; k<3; k++) {
+            console.log(`Third level ${k}`)
+        }
+    }
+}
